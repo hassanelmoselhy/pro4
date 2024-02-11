@@ -1,0 +1,82 @@
+ body{
+    height: 100vh;
+    background-image: linear-gradient(#1e2852,#482558);
+background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.box{
+   
+    width: 400px;
+    height: 500px;
+    margin: 50px;
+    position: relative;
+}
+
+.bg{
+    position: absolute;
+     background-image: url("bg.jpg") ; 
+     width: 100%;
+     height: 100%;
+     background-size: cover; 
+     transition-duration: 2s;
+}
+.box:hover .bg{
+    transform: perspective(20px)  rotatex(2deg) translateY(-50px) ;
+
+}
+.bird{
+    background-image: url(img11.png);
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+   animation-duration: 0.2s; 
+    bottom: 0;
+    animation-iteration-count: infinite ;
+    opacity: 70%;
+
+} 
+.box:hover .bird{
+transform: translateY(-200px ) translatex(-5px);
+animation-name: gif;
+opacity: 100%;
+
+}
+@keyframes gif {
+   from{
+  background-image:url(img11.png) ;
+    }
+    to{
+        background-image:url(img12.png) ;
+    }
+    }
+
+/* div{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    animation-name: hassan ;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes hassan{
+0%{
+        transform: translate(0 , 0);
+
+    }
+    25%{
+        transform: translate(300px ,0);
+    }
+  50%{
+        transform: translate(300px ,300px);
+    }
+   75%{
+        transform: translate(0 ,300px);
+    }
+   100%{
+        transform: translate(0 ,0);
+    }
+} */
